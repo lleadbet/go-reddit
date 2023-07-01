@@ -162,7 +162,8 @@ func (s *SubredditTrafficStats) UnmarshalJSON(b []byte) error {
 // SubredditSettings are a subreddit's settings.
 type SubredditSettings struct {
 	// The id of the subreddit.
-	ID string `url:"-" json:"subreddit_id,omitempty"`
+	ID   string `url:"-" json:"subreddit_id,omitempty"`
+	Name string `url:"name" json:"name,omitempty"`
 
 	// One of: public, restricted, private, gold_restricted, archived, employees_only, gold_only, user.
 	Type *string `url:"type,omitempty" json:"subreddit_type,omitempty"`
